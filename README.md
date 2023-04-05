@@ -1,48 +1,34 @@
 # Home_Sales
 
-Using SparkSQL to determine key metrics about home sales from a large AWS housed dataset
+Determining key metrics about home sales using SparkSQL, caching, and partitioning to optimize the efficiency of queries from an AWS housed dataset in the cloud
 
 - - -
 
 ## Instructions
 
-In this challenge, you'll use your knowledge of SparkSQL to determine key metrics about home sales data. Then you'll use Spark to create temporary views, partition the data, cache and uncache a temporary table, and verify that the table has been uncached.
+- Answer the following questions using SparkSQL:
 
-1. Rename the `Home_Sales_starter_code.ipynb` file as `Home_Sales.ipynb`.s
+  - What is the average price for a four-bedroom house sold for each year? Round off your answer to two decimal places.
 
-2. Import the necessary PySpark SQL functions for this assignment.
+  - What is the average price of a home for each year it was built that has three bedrooms and three bathrooms? Round off your answer to two decimal places.
 
-3. Read the `home_sales_revised.csv` data in the starter code into a Spark DataFrame.
+  - What is the average price of a home for each year that has three bedrooms, three bathrooms, two floors, and is greater than or equal to 2,000 square feet? Round off your answer to two decimal places.
 
-4. Create a temporary table called `home_sales`.
+  - What is the "view" rating for homes costing more than or equal to $350,000? Determine the run time for this query, and round off your answer to two decimal places.
 
-5. Answer the following questions using SparkSQL:
+- Using the cached data, run the query that filters out the view ratings with an average price of greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
 
-    - What is the average price for a four-bedroom house sold for each year? Round off your answer to two decimal places.
+- Partition by the "date_built" field on the formatted parquet home sales data.
 
-    - What is the average price of a home for each year it was built that has three bedrooms and three bathrooms? Round off your answer to two decimal places.
+- Create a temporary table for the parquet data.
 
-    - What is the average price of a home for each year that has three bedrooms, three bathrooms, two floors, and is greater than or equal to 2,000 square feet? Round off your answer to two decimal places.
+- Run the query that filters out the view ratings with an average price of greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
 
-    - What is the "view" rating for homes costing more than or equal to $350,000? Determine the run time for this query, and round off your answer to two decimal places.
+- Uncache the `home_sales` temporary table.
 
-6. Cache your temporary table `home_sales`.
+- Verify that the `home_sales` temporary table is uncached using PySpark.
 
-7. Check if your temporary table is cached.
-
-8. Using the cached data, run the query that filters out the view ratings with an average price of greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
-
-9. Partition by the "date_built" field on the formatted parquet home sales data.
-
-10. Create a temporary table for the parquet data.
-
-11. Run the query that filters out the view ratings with an average price of greater than or equal to $350,000. Determine the runtime and compare it to uncached runtime.
-
-12. Uncache the `home_sales` temporary table.
-
-13. Verify that the `home_sales` temporary table is uncached using PySpark.
-
-14. Download your `Home_Sales.ipynb` file and upload it into your "Home_Sales" GitHub repository.
+- Download your `Home_Sales.ipynb` file and upload it into your "Home_Sales" GitHub repository.
 
 ## Requirements
 
